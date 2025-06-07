@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined HTML Tables</title>
+    <style>
+        /* Styles for both tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px; /* Add some space between the tables */
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left; /* Default text alignment */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Specific styles for the COVID-19 Data table */
+        .covid-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .covid-table tfoot {
+            font-weight: bold;
+            background-color: #f2f2f2; /* Ensures footer background also applies */
+        }
+
+        /* Specific styles for the Merged Cells table */
+        .merged-table th, .merged-table td {
+            text-align: center; /* Override for merged cells table to match original */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Table with Merged Cells</h1>
+    <table class="merged-table">
+        <tr>
+            <th colspan="2">Header 1</th>
+            <th rowspan="2">Header 2</th>
+            <th colspan="2">Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+            <td>Row 3, Cell 4</td>
+            <td>Row 3, Cell 5</td>
+        </tr>
+        <tr>
+            <td>Row 4, Cell 2</td>
+            <td>Row 4, Cell 3</td>
+            <td>Row 4, Cell 4</td>
+            <td>Row 4, Cell 5</td>
+        </tr>
+    </table>
+
+    <h1>COVID-19 Data</h1>
+    <table class="covid-table">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Total Cases</th>
+                <th>Total Deaths</th>
+                <th>Total Recovered</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>USA</td>
+                <td>5,824,715</td>
+                <td>184,388</td>
+                <td>3,142,347</td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>3,219,755</td>
+                <td>59,449</td>
+                <td>2,542,362</td>
+            </tr>
+            <tr>
+                <td>Brazil</td>
+                <td>3,966,711</td>
+                <td>99,702</td>
+                <td>2,068,394</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total:</td>
+                <td>12,011,181</td>
+                <td>273,539</td>
+                <td>7,753,103</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

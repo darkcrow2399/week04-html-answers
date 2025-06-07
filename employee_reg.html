@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined HTML Elements</title>
+    <style>
+        /* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px; 
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+/* Styles for the Employee Registration Form */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto 50px auto; 
+    padding: 25px; 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+    box-sizing: border-box; 
+}
+
+.form-group {
+    margin-bottom: 18px; 
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px; 
+    color: #555; 
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="date"],
+.form-container select {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #c0c0c0;
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #007bff; /
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.form-container button[type="submit"] {
+    background-color: #28a745; 
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; 
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-top: 25px; 
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #218838; 
+}
+
+/* Styles for All Tables */
+table {
+    width: 90%; 
+    margin: 40px auto; 
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+th, td {
+    border: 1px solid #e0e0e0; 
+    padding: 12px 15px; 
+}
+
+th {
+    background-color: #007bff; 
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center; 
+}
+
+/* Alternating row colors for all tables */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f0f8ff; 
+}
+
+/* Specific styles for the COVID-19 Data table */
+.covid-table th:first-child { 
+    text-align: left;
+}
+.covid-table td:nth-child(2),
+.covid-table td:nth-child(3),
+.covid-table td:nth-child(4) { 
+    text-align: right;
+}
+
+.covid-table tfoot {
+    font-weight: bold;
+    background-color: #e9ecef;
+    color: #333;
+}
+.covid-table tfoot td {
+    text-align: right;
+}
+.covid-table tfoot td:first-child {
+    text-align: left; 
+}
+
+
+/* Specific styles for the Merged Cells table (Daily Schedule) */
+.merged-table th, .merged-table td {
+    text-align: center;
+}
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px; 
+            margin-bottom: 20px;
+        }
+
+        /* Styles for the Employee Registration Form */
+        .form-container { 
+            max-width: 400px;
+            margin: 0 auto 50px auto; 
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-container label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container input[type="date"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .form-container button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            display: block; 
+            margin-top: 20px;
+        }
+
+        .form-container button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styles for Tables */
+        table {
+            width: 80%; 
+            margin: 40px auto; 
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            background-color: #fff; 
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px; 
+            text-align: left; 
+        }
+
+        th {
+            background-color: #4CAF50; 
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .covid-table tr:nth-child(even) {
+            background-color: #f9f9f9; 
+        }
+
+        .covid-table tfoot {
+            font-weight: bold;
+        }
+        .merged-table th, .merged-table td {
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Employee Registration</h1>
+        <form action="#" method="post" id="registration-form">
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="middle_name">Middle Name:</label>
+                <input type="text" id="middle_name">
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <select id="department" required>
+                    <option value="hr">HR</option>
+                    <option value="finance">Finance</option>
+                    <option value="it">IT</option>
+                    <option value="sales">Sales</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="office">Office:</label>
+                <input type="text" id="office" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+   <h1>Daily Schedule with Merged Cells</h1>
+<table class="merged-table">
+    <tr>
+        <th colspan="2">Morning (9:00 AM - 11:00 AM)</th>
+        <th rowspan="2">Lunch Break (11:00 AM - 12:00 PM)</th>
+        <th colspan="2">Afternoon (12:00 PM - 2:00 PM)</th>
+    </tr>
+    <tr>
+        <td>Meeting (9:00 AM)</td>
+        <td>Project Work (10:00 AM)</td>
+        <td>Client Call (12:00 PM)</td>
+        <td>Data Analysis (1:00 PM)</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Team Collaboration (2:00 PM - 4:00 PM)</td>
+        <td>Email Catch-up (2:00 PM)</td>
+        <td>Report Writing (3:00 PM)</td>
+        <td>Training Session (4:00 PM)</td>
+        <td>Q&A (5:00 PM)</td>
+    </tr>
+    <tr>
+        <td>Feedback Review (3:00 PM)</td>
+        <td>Planning (4:00 PM)</td>
+        <td>Wrap-up (5:00 PM)</td>
+        <td>Next Day Prep (6:00 PM)</td>
+    </tr>
+</table>
+    <h1>COVID-19 Data</h1>
+    <table class="covid-table">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Total Cases</th>
+                <th>Total Deaths</th>
+                <th>Total Recovered</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>USA</td>
+                <td>5,824,715</td>
+                <td>184,388</td>
+                <td>3,142,347</td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>3,219,755</td>
+                <td>59,449</td>
+                <td>2,542,362</td>
+            </tr>
+            <tr>
+                <td>Brazil</td>
+                <td>3,966,711</td>
+                <td>99,702</td>
+                <td>2,068,394</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total:</td>
+                <td>12,011,181</td>
+                <td>273,539</td>
+                <td>7,753,103</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        // Get a reference to the form using its ID
+        const registrationForm = document.getElementById('registration-form');
+
+        // Add an event listener to the form for the 'submit' event
+        registrationForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior (page reload)
+            event.preventDefault();
+
+            // Get the values from each input field
+            const lastName = document.getElementById('last_name').value;
+            const firstName = document.getElementById('first_name').value;
+            const middleName = document.getElementById('middle_name').value;
+            const birthdate = document.getElementById('birthdate').value;
+            const department = document.getElementById('department').value;
+            const office = document.getElementById('office').value;
+
+            // Display the values in the console
+            console.log('--- Employee Registration Details ---');
+            console.log('Last Name:', lastName);
+            console.log('First Name:', firstName);
+            console.log('Middle Name:', middleName);
+            console.log('Birthdate:', birthdate);
+            console.log('Department:', department);
+            console.log('Office:', office);
+            console.log('-----------------------------------');
+
+          
+        });
+    </script>
+</body>
+</html>z
